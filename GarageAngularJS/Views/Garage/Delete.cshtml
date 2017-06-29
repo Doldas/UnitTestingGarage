@@ -1,0 +1,73 @@
+﻿@model GarageAngularJS.Models.Vehicle
+
+<h3>Do you want to check out this vehicle?</h3>
+<div>
+    @*<h4>Vehicle</h4>
+    <hr />*@
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkingPlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkingPlace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkingPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkingPrice)
+            Kr
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner)
+        </dd>
+
+    </dl>
+
+    @using(Html.BeginForm("Delete", "Garage", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input name="vehicleType_Long" type="submit" value="Payment" class="btn btn-warning" /> 
+            @*@Html.ActionLink("Cancel", "Index", new { @class = "btn btn-default"})*@
+            <input name="vehicleType_Long" type="button" class="btn btn-warning" value="Cancel" onclick="location.href='@Url.Action("Index", "Garage")'" />
+
+        </div>
+        <div class="col-md-10">
+            @Html.HiddenFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <br />
+    }
+</div>

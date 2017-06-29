@@ -1,0 +1,35 @@
+﻿ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;    
+    z-index: 1; 
+}
+
+    ul#menu li a {
+        display: block;
+    }
+
+li {
+    float: right;
+    display: inline;
+}
+
+    li a {
+        font-family: Geneva, Verdana, sans-serif;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: green /*#111*/;
+        }
+
+.active {
+    background-color:  *#4CAF50;
+}

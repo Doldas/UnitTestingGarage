@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Gruppen med 3 deltagare</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Custom_css/StyleSheet.css")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body ng-app="Garage">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="@Url.Action("Create", "Garage")" class="navbar-left"><img src="~/Content/Images/2_1.png" alt="HP Garage" style="height:30px; width:100px; margin-top:13px"/></a>               
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("HP Garage", "Index", "Garage", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("CheckIn", "Create", "Garage")</li>
+                    @*<li>@Html.ActionLink("CheckOut", "Delete", "Garage")</li>*@
+                    <li>@Html.ActionLink("Search", "Index", "Garage")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="my_container">
+        <img src="~/Content/Images/2.png" alt="Mountain View" style="width:284px;height:208px;" class="img-responsive">
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        @*<hr />*@
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Group of 3</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

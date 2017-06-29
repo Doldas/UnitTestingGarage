@@ -1,0 +1,228 @@
+﻿body {
+    background-color: lightgreen;
+    margin: 0;
+    padding:0;
+}
+
+.form-horizontal{
+        margin-left: 28%;
+}
+    
+input[name="vehicleType"]{
+    width: 100%;
+    width: 80px;
+    background-color: darkslategrey;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30%;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[name="vehicleType_Long"]{
+    /*width: 100%;*/
+    width: 100px;
+    background-color: darkslategrey;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30%;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border:none;
+}
+
+#vehicleType_Long{
+    width: 100%;
+    width: 100px;
+    background-color: darkslategrey;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30%;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border:none;
+}
+
+input[name="vehicleType"]:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[name="vehicleType_Long"]:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+#vehicleType_Long:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.my_container{
+    margin-top: 6%;
+    margin-left: 40%;
+    margin-bottom:3%;
+}
+
+.my_offset{
+        margin-left: 15%;
+        /*margin-left: 16.666666666666664%;*/
+}
+
+.Index_Menu{
+    width:100%;
+    text-align:center;
+}
+
+
+input#submit{
+  background:none;
+  border:none;
+  font-size:1em;
+  color:black;
+  font-weight: bold;
+}
+a:link#submit{
+    color:black;
+}
+
+a:active#submit{
+    color:black;
+}
+
+a:visited#submit{
+    color:black;
+}
+
+.left{
+    float:left;
+    width:300px;
+}
+
+.center{
+        display: inline-block;
+    margin:0 auto;
+    width:230px;
+}
+
+.right{
+        float:right;
+    width:100px;
+}
+
+.ActionLink{
+    color: darkblue;
+}
+
+/*.glyphicon {
+    font-size: 25px;
+}*/
+
+
+
+
+#GarMenu {
+    height: 20px;
+    width: 80px;
+    background-color: darkslategrey;
+    display: inline-block;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 30%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#Caption {
+    margin-top: 10%;
+}
+
+#Vehicle {
+    height: 20px;
+    width: 80px;
+    background-color: darkslategrey;
+    display: inline-block;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+#efg {
+    color: white;
+    background-color: darkslategrey;
+    border: none;
+    padding: 20px;
+    width: 100px;
+    margin-top: 5px;
+    margin-left: 4%;
+    border-radius: 30%;
+}
+
+#efg:hover {
+        background-color: green;
+    }
+
+button:hover {
+    background-color: green;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+#typemenu{
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    text-align:center;
+}
+
+#mmm {
+    display:block;
+    width:50%;
+    text-align:center;
+}
+
+#abcd {
+    margin-left: 25%;
+    float: left;
+    width: 60%;
+    height: 10%;
+    padding: 0;
+}
+
+#Type {
+    padding: 5%;
+    float: left;
+    margin-top: -3%;
+    text-align: center;
+}
+
+#ALLVehicles {
+    float:left;
+    padding: 5%;
+}
+#DatePark {
+    float:left;
+    padding: 5%;
+}
+
+select {
+    padding:5px;
+    background-color: darkslategrey;
+    color: white;
+}
+
+

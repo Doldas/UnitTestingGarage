@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageAngularJS", "GarageAngularJS\GarageAngularJS.csproj", "{26E2BDD3-F2D4-4129-91F2-40581D55F933}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarageUnitTests", "GarageUnitTests\GarageUnitTests.csproj", "{E3057B13-1AC1-4A50-BD16-BE06F7133EBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26E2BDD3-F2D4-4129-91F2-40581D55F933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E2BDD3-F2D4-4129-91F2-40581D55F933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E2BDD3-F2D4-4129-91F2-40581D55F933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E2BDD3-F2D4-4129-91F2-40581D55F933}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3057B13-1AC1-4A50-BD16-BE06F7133EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3057B13-1AC1-4A50-BD16-BE06F7133EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3057B13-1AC1-4A50-BD16-BE06F7133EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3057B13-1AC1-4A50-BD16-BE06F7133EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

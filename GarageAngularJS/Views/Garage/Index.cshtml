@@ -1,0 +1,126 @@
+﻿@model IEnumerable<GarageAngularJS.Models.Vehicle>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+@*<h>Vehicle List</h>*@
+@*<p>search</p>*@
+<div ng-controller="MainController" ng-init="getData()">
+    <div class="Index_Menu" >
+        @*<p ng-repeat="vehicle in data">{{vehicle}}</p>*@
+        <div class="left">
+            <form class="glyphicon glyphicon-search" method="get">
+                <input type="text" name="Search" ng-model="searchTerm" @*ng-submit="FreeSearch()"*@ placeholder="Free Search" style="width:120px; height:25px;font-family: Helvetica, Arial, sans-serif" />
+                @*<input id="vehicleType_Long" ng-click="FreeSearch(searchTerm)" class="btn btn-primary" type="submit" value="Search" />*@
+            </form>
+        </div>
+
+        <div class="center">
+
+            <form @*method="post"*@ @*ng-submit="searchType(type)"*@>
+                <select name="SearchType" ng-model="searchTerm" @*ng-change="filter(filter)"*@>
+                    <option value="" selected>Search type</option>
+                    <option value="Car">Car</option>
+                    <option value="Bus">Bus</option>
+                    <option value="Truck">Truck</option>
+                    <option value="Mc">Mc</option>
+                    <option value="Horse">Horse</option>
+                </select>
+                @*<input name="vehicleType_Long" class=" btn btn-default" type="submit" value="Type" ng-click="filter(filter)" />*@
+            </form>
+        </div>
+        <div class="right">
+                @*<input ng-click="getData()" name="vehicleType_Long" type="submit" value="Revert" onclick="location.href='@Url.Action("Index", "Garage")'" />*@
+            </div>
+
+        @*<div class="right">
+                <input name="vehicleType_Long" type="submit" value="Revert" onclick="location.href='@Url.Action("Index", "Garage")'" />
+            </div>*@
+        <p></p>
+    </div>
+
+    <table class="table">
+        <tr>
+            @*<th>
+                    <form method=" post">
+        <input type="submit" name="Sort" value="@Html.DisplayNameFor(model => model.RegNumber)" id="submit" />&#9660;
+        </form>
+        </th>
+        <th>
+            <form method="post">
+                <input type="submit" name="Sort" value="@Html.DisplayNameFor(model => model.Owner)" id="submit" />&#9660;
+            </form>
+        </th>
+        <th>
+            <form method="post">
+                <input type="submit" name="Sort" value="@Html.DisplayNameFor(model => model.Type)" id="submit" />&#9660;
+            </form>
+        </th>
+        <th ng-click="orderByMe('regNumber')">
+            RegNumber
+            <form method="post">
+                <input type="submit" name="Sort" value="@Html.DisplayNameFor(model => model.ParkingPlace)" id="submit" />&#9660;
+            </form>
+        </th>*@
+
+        <th ng-click="orderByMe('RegNumber')">RegNumber &#9660</th>
+        <th ng-click="orderByMe('Owner')">Owner &#9660</th>
+        <th ng-click="orderByMe('Type')">Type &#9660</th>
+        <th ng-click="orderByMe('ParkingPlace')">ParkingPlace &#9660</th>
+
+        <th></th>
+        </tr>
+
+        @{
+            var url1 = Url.Action("Edit", new { ID = "{{id=vehicle.ID}}" });
+            url1 = HttpUtility.UrlDecode(url1);
+        }
+        @{
+            var url2 = Url.Action("Details", new { ID = "{{id=vehicle.ID}}" });
+            url2 = HttpUtility.UrlDecode(url2);
+        }
+        @{
+            var url3 = Url.Action("Delete", new { ID = "{{id=vehicle.ID}}" });
+            url3 = HttpUtility.UrlDecode(url3);
+        }
+
+        <tr ng-repeat="vehicle in vehicles | orderBy:myOrderBy | filter:searchTerm ">
+            @*<td>{{vehicle.ID}}</td>*@
+            <td>{{vehicle.RegNumber}}</td>
+            <td>{{vehicle.Owner}}</td>
+            <td>{{vehicle.Type}}</td>
+            <td>{{vehicle.ParkingPlace}}</td>
+            <td>
+                <a data-ng-href="@url1">Edit</a> |
+                <a data-ng-href="@url2">Details</a> |
+                <a data-ng-href="@url3">CheckOut</a>
+            </td>
+        </tr>
+
+
+        @*@foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Owner)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ParkingPlace)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "ActionLink" }) |
+                        @Html.ActionLink("CheckOut", "Delete", new { id = item.ID }, new { @class = "ActionLink" })
+                    </td>
+                </tr>
+            }*@
+
+    </table>
+</div>
